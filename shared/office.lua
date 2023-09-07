@@ -22,7 +22,7 @@ SO.office = {
     },
     veh = {
         active = true,
-        model = 's_m_m_highsec_01',
+        model = 'u_m_m_jewelsec_01',
         scenario = 'WORLD_HUMAN_SMOKING_CLUBHOUSE',
         loc = vec4(892.450, -2108.867, 31.230, 127.311)
     }
