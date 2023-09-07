@@ -14,7 +14,8 @@ description 'template'
 -- Manifest
 shared_scripts {
 	'@ox_lib/init.lua',
-    'shared/template.lua',
+    'shared/office.lua',
+    'shared/patrols.lua',
 	'shared/config.lua'
 }
 
