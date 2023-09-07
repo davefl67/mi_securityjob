@@ -34,3 +34,29 @@ RegisterCommand('callbackup', function()
 
     end
 end, false)
+
+RegisterCommand('call1', function()
+    local chase = true
+    if chase then
+        local char = lib.requestModel(SO.office.job.model, 300)
+        local model = 'bsmesa'
+        RequestModel(model)
+        while not HasModelLoaded(model) do
+            RequestModel(model)
+            Citizen.Wait(0)
+        end
+
+        TriggerServerEvent('misj:sever:spawn:backup', veh, model, char, spawn)
+
+        Citizen.Wait(1000)
+        TaskVehicleDriveToCoord(ped, veh, dest.x, dest.y, dest.z, 30.0, 1.0, model, 28, 2.0, 4 )
+
+        local sphere = lib.zones.sphere({
+            coords = vec3(dest.x, dest.y, dest.z),
+            radius = 10,
+            debug = true,
+            onEnter = onEnter,
+        })
+
+    end
+end, false)

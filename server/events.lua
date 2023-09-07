@@ -1,0 +1,15 @@
+RegisterNetEvent('misj:sever:spawn:vehicle')
+AddEventHandler('misj:sever:spawn:vehicle', function(vehicle, model, coords)
+    vehicle = CreateVehicle(model, coords.x, coords.y, coords.z, coords.w, true, false)
+end)
+
+RegisterNetEvent('misj:sever:spawn:ped')
+AddEventHandler('misj:sever:spawn:ped', function(ped, model, coords)
+    ped = CreatePed(1, model, coords.x, coords.y, coords.z-1, coords.w, true, false)
+end)
+
+RegisterNetEvent('misj:sever:spawn:backup')
+AddEventHandler('misj:sever:spawn:backup', function(vehicle, model, ped, coords)
+    vehicle = CreateVehicle(model, coords.x, coords.y, coords.z, coords.w, true, false)
+    CreatePedInsideVehicle(vehicle, ped, model, -1, true, true)
+end)
