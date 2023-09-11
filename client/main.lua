@@ -1,4 +1,4 @@
--- blip setting
+-- [blip setting]
 local function stationblip()
     local sb = nil
     local pb = SO.blip
@@ -14,7 +14,7 @@ local function stationblip()
     EndTextCommandSetBlipName(sb)
 end
 
-Citizen.CreateThread(function()
+CreateThread(function()
     if SO.blip.allow then
         stationblip()
         Citizen.Wait(1000)
@@ -22,7 +22,7 @@ Citizen.CreateThread(function()
     if true then
         TriggerEvent('misj:load:workped', -1)
         TriggerEvent('misj:load:vehped', -1)
-        Citizen.Wait(1000)
+        Wait(1000)
     end
 
 end)
