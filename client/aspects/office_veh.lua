@@ -26,7 +26,9 @@ local loadcheckin = function()
                         return distance < 1.5
                     end,
                     onSelect = function()
-                        -- get a job
+                        local veh, crds = nil, SO.office.vehspawn
+                        TriggerServerEvent('misj:sever:spawn:vehicle', veh,
+                        'stockade2', crds.x, crds.y, crds.z, crds.w)
                     end
                 },
             }

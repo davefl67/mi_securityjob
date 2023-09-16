@@ -25,5 +25,6 @@ SO.office = {
         model = 'u_m_m_jewelsec_01',
         scenario = 'WORLD_HUMAN_SMOKING_CLUBHOUSE',
         loc = vec4(892.450, -2108.867, 31.230, 127.311)
-    }
+    },
+    vehspawn = vec4(890.619, -2100.122, 30.251, 355.902)
 }
