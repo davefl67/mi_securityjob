@@ -10,15 +10,11 @@ RegisterCommand('callbackup', function()
     local chase = true
     if chase then
         local char = lib.requestModel(SO.office.job.model, 300)
-        ped = CreatePed(1, char, spawn.x, spawn.y, spawn.z, spawn.w, true, false)
+        ped = lib.callback('misj:sever:spawn:ped', false, function() end, char, spawn)
 
-        local model = 'bsmesa'
-        RequestModel(model)
-        while not HasModelLoaded(model) do
-            RequestModel(model)
-            Citizen.Wait(0)
-        end
-        veh = CreateVehicle(model, spawn.x, spawn.y, spawn.z, spawn.w, true, false)
+        local model = SO.office.spn.veh1.model
+        
+        veh = lib.callback('misj:sever:spawn:bkpvehicle', false, function() end, model, spawn)
         SetEntityAsMissionEntity(veh, true, true)
 
         SetPedIntoVehicle(ped, veh, -1)

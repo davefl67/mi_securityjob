@@ -1,4 +1,4 @@
-local isactive = SO.office.job.active
+local isactive = true
 local uni
 
 local prep = function(ped)

@@ -8,7 +8,7 @@ local function onExit(self)
 end
 
 local box = lib.zones.box({
-    name = "prop1",
+    name = "property",
 	coords = vec3(948.7, -519.15, 60.0),
 	size = vec3(23.5, 26.0, 8.0),
 	rotation = 300.25,
