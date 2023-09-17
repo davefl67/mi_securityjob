@@ -3,6 +3,9 @@ Debug = true
 Target = exports.ox_target
 Inventory = exports.ox_inventory
 
+-- current framework options: OX
+Framework = 'OX'
+
 -- notification configuration for script
 Ntfy = {
     id = 'notify',          -- don't worry about this
